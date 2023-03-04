@@ -33,6 +33,7 @@ function screenPath
 	gsettings set org.gnome.gnome-screenshot auto-save-directory $argv
 end
 
+# cd paths
 function pics 
 	cd 
 	cd Pictures/
@@ -49,12 +50,17 @@ function docs
 	cd Documents
 end
 
+function projects
+	docs
+	cd projects
+end
+
 # fish functions git commit comands
 function aff
 	fp
+	git diff
 	git add config.fish
 	git add README.md
-	git diff
 	git status
 end
 
