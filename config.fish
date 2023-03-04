@@ -49,24 +49,31 @@ function docs
 	cd Documents
 end
 
-function cff
+# fish functions git commit comands
+function aff
 	fp
 	git add config.fish
+	git add README.md
 	git diff
 	git status
 end
 
-function pff
-	cff
+function cff
+	aff
 	git commit -m "$argv $now"
 	git log --pretty=oneline 
 end
 
-function pffa
-	cff
+function cffa
+	aff
 	git commit -m "$argv $now" --amend
 	git log --pretty=oneline
 end 
+
+function pff
+	fp
+	git push origin main
+end
 
 ## aliases
 alias fp "cd $fishpath"
