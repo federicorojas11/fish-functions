@@ -2,7 +2,7 @@
 
 ## variables
 set fishpath ~/.config/fish/
-
+set now (date)
 
 ## funciones
 
@@ -49,8 +49,28 @@ function docs
 	cd Documents
 end
 
+function cff
+	fp
+	git add config.fish
+	git diff
+	git status
+end
+
+function pff
+	cff
+	git commit -m "$argv $now"
+	git log --pretty=oneline 
+end
+
+function pffa
+	cff
+	git commit -m "$argv $now" --amend
+	git log --pretty=oneline
+end 
 
 ## aliases
-alias Fp "cd $fishpath"
+alias fp "cd $fishpath"
 alias cfg "sudo nano ~/.config/fish/config.fish"
 alias pcfg "cat ~/.config/fish/config.fish"
+alias pnow "printf (date)"
+
