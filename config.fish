@@ -81,9 +81,25 @@ function pff
 	git push origin main
 end
 
+# git commands
+function gc
+	git commit -m "$argv"
+end
+
+function gca 
+	git commit -m "$argv" --amend
+end
+
+function gr
+	git rebase origin/$argv
+end
+
 ## aliases
 alias fp "cd $fishpath"
-alias cfg "sudo nano ~/.config/fish/config.fish"
+alias cfg "sudo nano -c ~/.config/fish/config.fish"
 alias pcfg "cat ~/.config/fish/config.fish"
 alias pnow "printf (date)"
-
+alias gf "git fetch"
+alias gs "git status"
+alias gl "git log --oneline"
+alias ga "git add ."
