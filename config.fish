@@ -55,6 +55,21 @@ function projects
 	cd projects
 end
 
+function tokenizador
+	projects
+	cd tokenizador
+end
+
+function bill-travel
+	projects
+	cd bill-travel
+end
+
+function scrumit
+	projects
+	cd scrumit
+end
+
 # fish functions git commit comands
 function aff
 	fp
