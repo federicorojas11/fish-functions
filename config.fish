@@ -70,6 +70,11 @@ function scrumit
 	cd scrumit
 end
 
+function code-verifier
+	projects
+	cd code-verifier-backend
+end
+
 # fish functions git commit comands
 function aff
 	fp
