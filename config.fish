@@ -33,6 +33,15 @@ function screenPath
 	gsettings set org.gnome.gnome-screenshot auto-save-directory $argv
 end
 
+# keyboard
+function rgb
+	xset led 3
+end
+
+function rgboff
+	xset led off
+end
+
 # cd paths
 function pics 
 	cd 
