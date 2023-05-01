@@ -19,7 +19,7 @@ end
 # find file 
 function f
 	cd
-	find . -name $argv
+	sudo find . -name $argv
 end
 
 # add to fish config file
@@ -69,19 +69,16 @@ function tokenizador
 	cd tokenizador
 end
 
-function bill-travel
-	projects
-	cd bill-travel
-end
-
-function scrumit
-	projects
-	cd scrumit
-end
-
 function code-verifier
 	projects
 	cd code-verifier-backend
+	code .; clear;
+end
+
+function katas-code-verifier-react
+	projects
+	cd code-verifier-react
+	code .; clear;
 end
 
 # fish functions git commit comands
@@ -123,6 +120,10 @@ function gr
 	git rebase origin/$argv
 end
 
+function gp
+	git push
+end
+
 ## aliases
 alias fp "cd $fishpath"
 alias cfg "sudo nano -c ~/.config/fish/config.fish"
@@ -132,3 +133,5 @@ alias gf "git fetch"
 alias gs "git status"
 alias gl "git log --oneline"
 alias ga "git add ."
+rvm default
+rvm default
