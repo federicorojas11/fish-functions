@@ -70,6 +70,8 @@ function tokenizador
 end
 
 function code-verifier
+	xdotool key ctrl+shift+t #abrir nueva tab. Dependencia: sudo apt-get install xdotool
+	nohup postman & disown #abrir postman desde cmd y liberar terminal 
 	projects
 	cd code-verifier-backend
 	code .; clear;
