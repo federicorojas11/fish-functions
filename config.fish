@@ -59,9 +59,13 @@ function docs
 	cd Documents
 end
 
+# projects
 function projects
 	docs
 	cd projects
+	if count $argv > /dev/null
+         cd $argv
+	end
 end
 
 function tokenizador
@@ -117,7 +121,11 @@ function gca
 	git commit -m "$argv" --amend
 end
 
-function gr
+function grm 
+	git remote -v
+end
+
+function grb 
 	git rebase origin/$argv
 end
 
